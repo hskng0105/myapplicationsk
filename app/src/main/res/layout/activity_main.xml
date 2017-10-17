@@ -16,46 +16,87 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintVertical_bias="0.437"
+        android:id="@+id/textView3" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="159dp"
-        android:layout_height="124dp"
+        android:layout_width="111dp"
+        android:layout_height="116dp"
+        android:contentDescription=""
         app:srcCompat="@drawable/pic"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="80dp"
-        tools:ignore="ContentDescription,MissingConstraints"
-        android:contentDescription="" />
+        tools:ignore="ContentDescription,MissingConstraints,RtlHardcoded"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintVertical_bias="0.121" />
 
     <Button
-        android:id="@+id/button"
-        android:onClick="onClick"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:onClick="Six"
         android:text="Go to sub activity"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="447dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragx"
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <fragment
-        android:id="@+id/frag0"
+        android:id="@+id/fragy"
         android:name="com.example.myapplicationsk.BlankFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="301dp"
-        tools:layout="@layout/fragment_blank"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_blank" />
 
     <fragment
-        android:id="@+id/frag1"
+        android:id="@+id/fragx"
         android:name="com.example.myapplicationsk.TelFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="342dp"
         tools:layout="@layout/fragment_tel"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Fiv"
+        android:text="Button"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="318dp" />
 
 </android.support.constraint.ConstraintLayout>

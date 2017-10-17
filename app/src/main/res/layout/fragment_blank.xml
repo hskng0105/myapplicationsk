@@ -5,13 +5,10 @@
     tools:context="com.example.myapplicationsk.BlankFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <TextView
-        android:id="@+id/frag0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2C 216230118"
-        tools:ignore="HardcodedText" />
-
+        android:id="@+id/fragy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="2C216230118" />
 
 </FrameLayout>

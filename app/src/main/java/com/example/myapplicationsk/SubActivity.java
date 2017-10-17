@@ -1,59 +1,37 @@
 package com.example.myapplicationsk;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
-/**
- * Created by 삼성 on 2017-10-17.
- */
-
 public class SubActivity extends Activity {
-    int flag=1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
-
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        FragmentActivity1 fragment = new FragmentActivity1();
-
-        fragmentTransaction.add(R.id.container,fragment);
-        fragmentTransaction.commit();
-    }
-    public void onClick(View view)
-    {
-        finish();
     }
 
-    public void onChangeFragment(View v){
-        Fragment fragment;
+    public void selectFrag(View view){
+        Fragment fr;
 
-        switch(flag){
-            default:
-                case 0:{
-                    fragment = new FragmentActivity1(); //블루
-                    flag=1;
-                    break;
-            }
-            case 1:{
-                    fragment= new FragmentActivity2(); //레드
-                    flag=0;
-                    break;
-            }
+        if(view == findViewById(R.id.button2)){
+            fr = new FragmentActivity1();
+        }else {
+            fr = new FragmentActivity2();
         }
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container,fragment);
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_place, fr);
         fragmentTransaction.commit();
     }
 
 }
+
+
